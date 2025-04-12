@@ -1,0 +1,16 @@
+{
+  "name": "techstore",
+  "version": "1.0.0",
+  "description": "TechStore e-commerce platform with admin panel",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../admin && npm install",
+    "backend": "cd backend && npm run dev",
+    "admin": "cd admin && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run admin\"",
+    "create-admin": "cd backend && npm run create-admin"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
